@@ -1,0 +1,34 @@
+name: WorldProtection
+main: worldprotection.Main
+author: maru
+version: "1.0.0"
+api: ["1.0.0"]
+
+commands:
+ whiteworld:
+  usage: "/whiteworld <add|delete|list>"
+  description: "Manage protection world"
+  permission: whiteworld.commands.*
+
+permissions:
+ whiteworld.*:
+  default: OP
+  children:
+   whiteworld.commands.*:
+    default: OP
+    children:
+     whiteworld.commands.add:
+      default: OP
+     whiteworld.commands.delete:
+      default: OP
+     whiteworld.commands.list:
+      default: OP
+   whiteworld.fixable.*:
+    default: OP
+    children:
+     whiteworld.fixable.break:
+      default: OP
+     whiteworld.fixable.place:
+      default: OP
+     whiteworld.fixable.touch:
+      default: OP
