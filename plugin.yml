@@ -1,7 +1,7 @@
 name: WorldProtection
 main: worldprotection.Main
 author: maru
-version: "1.0.0"
+version: "1.0.1"
 api: ["1.0.0"]
 
 commands:
